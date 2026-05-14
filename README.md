@@ -1,75 +1,91 @@
-# React + TypeScript + Vite
+# Crypto Market Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React project for practicing **API integration, data fetching, and state management** using modern frontend tools.  
+This application displays cryptocurrency market data with pagination and auto‑refresh functionality.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Fetch cryptocurrency data from an external API
+- Built with **React + TypeScript**
+- Data fetching and caching using **React Query**
+- HTTP requests handled with **Axios**
+- **Pagination (20 coins per page)**
+- Automatic data refetch for updated market prices
+- Modern UI styled with **TailwindCSS**
+- Displays detailed information for each cryptocurrency:
+  - Name
+  - English name
+  - Icon
+  - Price (USD)
+  - Price in Toman
+  - Market Cap
+  - Price change percentage
+  - Date
+  - Time
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- React
+- TypeScript
+- Axios
+- TanStack React Query
+- TailwindCSS
+- Vite
 
-Note: This will impact Vite dev & build performances.
+## Installation
 
-## Expanding the ESLint configuration
+Clone the repository:
+```bash
+git clone https://github.com/your-username/crypto-dashboard.git
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Navigate to the project folder:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+bash
+cd crypto-dashboard
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Install dependencies:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+bash
+npm install
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Run the development server:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+bash
+npm run dev
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+The app will be available at:
+
+
+http://localhost:5173
+
+## API Used
+
+Cryptocurrency market data is fetched from:
+
+
+https://api.brsapi.ir
+
+## Project Structure
+
+
+src
+ ├─ components
+ ├─ CryptoPage 
+ ├─ API
+ │   └─ api-types.ts
+ ├─ App.tsx
+ └─ main.tsx
+
+## Learning Goals
+
+This project was created to practice:
+
+- Working with external APIs
+- Managing server state with React Query
+- Structuring React applications
+- Using TypeScript for safer code
+- Building responsive UI with TailwindCSS
+
+## License
+
+This project is open-source and available under the MIT License.
