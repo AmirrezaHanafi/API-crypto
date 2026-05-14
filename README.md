@@ -40,17 +40,17 @@ git clone https://github.com/your-username/crypto-dashboard.git
 
 Navigate to the project folder:
 
-bash
+
 cd crypto-dashboard
 
 Install dependencies:
 
-bash
+
 npm install
 
 Run the development server:
 
-bash
+
 npm run dev
 
 The app will be available at:
