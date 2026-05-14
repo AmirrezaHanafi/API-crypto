@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Inter';
+    src: url(/fonts/Inter/Inter_24pt-Regular.ttf) ;
+
+}
+@font-face {
+    font-family: 'InterBold';
+    src: url(/fonts/Inter/Inter_24pt-Bold.ttf) ;
+
+}
+@font-face {
+    font-family: 'InterExtraBold';
+    src: url(/fonts/Inter/Inter_24pt-ExtraBold.ttf) ;
+
+}
+
+@theme {
+    /* Backgrounds */
+    --color-bg: #0B1020;
+    --color-surface: #121A2B;
+    --color-card: #182338;
+
+    /* Primary */
+    --color-primary: #4F8CFF;
+    --color-primary-hover: #3B74E8;
+
+    /* Status */
+    --color-success: #22C55E;
+    --color-danger: #EF4444;
+    --color-warning: #F59E0B;
+
+    /* Text */
+    --color-text: #F3F4F6;
+    --color-text-muted: #94A3B8;
+
+    /* Border */
+    --color-border: #263043;
+
+    /* Extra crypto colors */
+    --color-bitcoin: #F7931A;
+    --color-ethereum: #627EEA;
+    --color-solana: #14F195;
+
+    /* Radius */
+    --radius-card: 1rem;
+    --radius-btn: 0.75rem;
+
+    /* Shadows */
+    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.25);
+    --shadow-glow: 0 0 20px rgba(79, 140, 255, 0.35);
+
+    /* Fonts */
+    --font-Inter: "Inter", sans-serif;
+    --font-InterBold: "InterBold", sans-serif;
+    --font-InterExtraBold: "InterExtraBold", sans-serif;
+}
+@utility container{
+    @apply px-2 md:px-4 mx-auto
+}
+
+body {
+    @apply text-base font-Inter bg-bg text-text;
+}
+button {
+    cursor: pointer;
+}
